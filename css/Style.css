@@ -4,22 +4,22 @@
 }
 @font-face{
     font-family: Montserrat-Light;
-    src: url(../fonts/Montserrat-Light.ttf);
+    src: url(fonts/Montserrat-Light.ttf);
 }
 
 @font-face {
     font-family: Montserrat-ExtraBold;
-    src: url(../fonts/Montserrat-ExtraBold.ttf);
+    src: url(fonts/Montserrat-ExtraBold.ttf);
 }
 
 @font-face {
     font-family: Montserrat-Bold;
-    src: url(../fonts/Montserrat-Bold.ttf);
+    src: url(fonts/Montserrat-Bold.ttf);
 }
 
 @font-face {
     font-family: Montserrat-Medium;
-    src: url(../fonts/Montserrat-Medium.ttf);
+    src: url(fonts/Montserrat-Medium.ttf);
 }
 
 html{
@@ -212,7 +212,7 @@ html{
 }
 
 .card1 {
-    background-image: url(../img/card1.png);
+    background-image: url(img/card1.png);
     width: 458px;
     height: 594px;
     position: relative; 
@@ -285,7 +285,7 @@ html{
     width: 1440px;
     height: 669px;
     margin-top: -100px;
-    background-image: url(../img/fone_str4.png);
+    background-image: url(img/fone_str4.png);
 }
 
 .form-group { 
@@ -327,7 +327,7 @@ label {
     margin-top: -200px;
     width: 1440px;
     height: 750px;
-    background-image: url(../img/fone_str7.png);
+    background-image: url(img/fone_str7.png);
 }
 
 .str8{
@@ -355,7 +355,7 @@ label {
 .img{
     width: 1155px;
     height: 365px;
-    background-image: url(../img/CTA.png);
+    background-image: url(img/CTA.png);
 }
 
 .footer{
@@ -363,7 +363,7 @@ label {
     height: 334px;
     margin-top: 96px;
    
-    background-image: url(../img/footer.png);
+    background-image: url(img/footer.png);
 }
 
 .btn3{
@@ -478,7 +478,7 @@ label {
 
 
 .card3 {
-    background-image: url(../img/card1.png);
+    background-image: url(img/card1.png);
     width: 458px;
     height: 594px;
     position: relative; 
@@ -788,7 +788,7 @@ label {
     }
     
     .card1 {
-        background-image: url(../img/card1.png);
+        background-image: url(img/card1.png);
         width: 458px;
         height: 594px;
         position: relative; 
@@ -943,7 +943,7 @@ label {
         margin-top: -200px;
         width: 1440px;
         height: 750px;
-        background-image: url(../img/fone_str7.png);
+        background-image: url(img/fone_str7.png);
     }
 
     .str8{
@@ -961,7 +961,7 @@ label {
         width: 390px;
         height: 737px;
         margin-top: 96px;
-        background-image: url(../img/foooter23.png);
+        background-image: url(img/foooter23.png);
     }
 
     .nav1{
