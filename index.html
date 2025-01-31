@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moco</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <link rel="stylesheet" href="../Moco/css/Style.css">
+</head>
+<body>
+    <div class="container1">
+        <header class="header">
+                <div class="logo">
+                    <a class="header_logo" href="#">
+                        <p>
+                            <span class="header_logo_txt1">мафф</span><span class="header_logo_txt2">ф</span><span class="header_logo_txt1">ин</span>
+                        </p>
+                    </a>
+                    <nav>
+                        <ul class="nav">
+                            <li class="nav_header"><a class="nav_header_txt" href="#section1">О нас</a></li>
+                            <li class="nav_header"><a class="nav_header_txt" href="#section2">Цены</a></li>
+                            <li class="nav_header"><a class="nav_header_txt" href="#section3">Доставка</a></li>
+                            <li class="nav_header"><a class="nav_header_txt" href="#section4">Блог</a></li>
+                            <li class="nav_header"><a class="nav_header_txt" href="#section5">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="btn">
+                    <a class="btn_a" href="#">Позвонить</a>
+                </div>
+        </header>
+        <main>
+            <div class="str1">
+                <div class="zag">
+                    <p class="zag_txt1">Свежие маффины</br>на любой вкус</p>
+                    <p class="zag_txt2">Мы готовим маленькие сладости, 
+                        которые приносят</br>большие улыбки в любой день и без повода</p>
+                    <div class="btn1">
+                        <a class="btn_a1" href="#">Позвонить</a>
+                    </div>
+                </div>
+                <img class="img23" src="../Moco/img/photo1.png" alt="srt1">
+            </div>
+            <div class="str2" id="section2">
+                <div class="title">
+                    <p class="title_txt">Сладости на праздник</p>
+                </div>
+                <div class="cards">
+                <div class="container_cards">
+                    <div class="card1">
+                        <p class="card1_txt">День рождения</p>
+                        <div class="btn_card1">
+                            <a class="btn_card1_a" href="#">Заказать</a>
+                        </div>
+                    </div>
+                    <div class="card1">
+                        <p class="card1_txt">День рождения</p>
+                        <div class="btn_card1">
+                            <a class="btn_card1_a" href="#">Заказать</a>
+                        </div>
+                    </div>
+                    <div class="card1">
+                        <p class="card1_txt">День рождения</p>
+                        <div class="btn_card1">
+                            <a class="btn_card1_a" href="#">Заказать</a>
+                        </div>
+                    </div>
+                    <div class="card1">
+                        <p class="card1_txt">День рождения</p>
+                        <div class="btn_card1">
+                            <a class="btn_card1_a" href="#">Заказать</a>
+                        </div>
+                    </div>
+                    <div class="card1">
+                        <p class="card1_txt">День рождения</p>
+                        <div class="btn_card1">
+                            <a class="btn_card1_a" href="#">Заказать</a>
+                        </div>
+                    </div>
+                    <div class="card1">
+                        <p class="card1_txt">День рождения</p>
+                        <div class="btn_card1">
+                            <a class="btn_card1_a" href="#">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+            </div>
+            <div class="str3" id="section1">
+               <div class="title">
+                 <p class="title_txt">Почему мы?</p>
+               </div>
+               <div class="cards2">
+                <img src="../Moco/img/card2_1.png" alt="card2">
+                <img src="../Moco/img/card2_2.png" alt="card2">
+                <img src="../Moco/img/card2_3.png" alt="card2">
+               </div>
+            </div>
+            <div class="contents">
+                <img src="../Moco/img/Counters.png" alt="content">
+            </div>
+            <div class="str4">
+                <p class="txtv">Закажите мафин</p>
+                <div class="form1"></div>
+                <form id="muffinForm" class="form1">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" 
+                               class="styled-input"
+                               pattern="[А-Яа-яЁё\s]+" 
+                               title="Только кириллические буквы"
+                               placeholder="Имя"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" 
+                                class="styled-input"
+                               placeholder="Номер"
+                               required>
+                    </div>
+                    <div class="form-group1">
+                        <label for="file" class="custom-file-upload">
+                            <img src="../Moco/img/loading.png" alt="" class="upload-image">
+                        </label>
+                        <input type="file" id="file" name="file" 
+                               accept=".jpg, .jpeg, .png, .bmp"
+                               onchange="validateFile(this)" 
+                               style="display: none;">
+                        <div id="fileError" class="error"></div>
+                    </div>
+                    <button class="btn2" type="submit"><a class="btn2_a" href="#">Заказать</a></button>
+                </form>
+            </div>
+                <script>
+                    $(document).ready(function(){
+                        $('#phone').inputmask("+7(999)999-99-99");
+                    });
+            
+                    function validateFile(input) {
+                        const fileError = document.getElementById('fileError');
+                        const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.bmp)$/i;
+                        
+                        if (!allowedExtensions.exec(input.value)) {
+                            fileError.textContent = 'Разрешены только файлы JPG, JPEG, PNG и BMP';
+                            input.value = '';
+                        } else {
+                            fileError.textContent = '';
+                        }
+                    }
+                    document.getElementById('muffinForm').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        this.submit();
+                    });
+                </script>
+        
+            <div class="str5" id="section3">
+                <div class="title">
+                    <p class="title_txt">Процесс реализации заказа</p>
+                </div>
+                <div class="cards3">
+                    <img src="../Moco/img/card3_1.png" alt="card3">
+                    <img src="../Moco/img/card3_2.png" alt="card3">
+                    <img src="../Moco/img/card3_3.png" alt="card3">
+                    <img src="../Moco/img/card3_4.png" alt="card3">
+                </div>
+            </div>
+            <div class="str6">
+                <div class="title">
+                    <p class="title_txt">Что о нас говорят наши клиенты?</p>
+                </div>
+                    <div class="cards5">
+                        <img src="../Moco/img/card5.png" alt="card5">
+                        <img src="../Moco/img/card5.png" alt="card5">
+                        <img src="../Moco/img/card5.png" alt="card5">
+                    </div>
+            </div>
+            <div class="str7">
+                <div class="form2"></div>
+                <form id="muffinForm" class="form2">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" 
+                               class="styled-input"
+                               pattern="[А-Яа-яЁё\s]+" 
+                               title="Только кириллические буквы"
+                               placeholder="Имя"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" 
+                                class="styled-input"
+                               placeholder="Номер"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <select id="taste" name="taste" required>
+                            <option value="">Выберите вкус</option>
+                            <option value="choco">Шоколадный радужный</option>
+                            <option value="berry">Ягодное ассорти</option>
+                            <option value="caramel">Карамельный взрыв</option>
+                            <option value="vanilla">Ванильная мечта</option>
+                        </select>
+                    </div>
+                    <button class="btn1" type="submit"><a class="btn1_a" href="#">Заказать</a></button>
+                </form>
+            </div>
+                <script>
+                    $(document).ready(function(){
+                        $('#phone').inputmask("+7(999)999-99-99");
+                    });
+            
+                    function validateFile(input) {
+                        const fileError = document.getElementById('fileError');
+                        const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.bmp)$/i;
+                        
+                        if (!allowedExtensions.exec(input.value)) {
+                            fileError.textContent = 'Разрешены только файлы JPG, JPEG, PNG и BMP';
+                            input.value = '';
+                        } else {
+                            fileError.textContent = '';
+                        }
+                    }
+                    document.getElementById('muffinForm').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        this.submit();
+                    });
+                </script>
+            <div class="str8" id="section4">
+                <div class="title">
+                    <p class="title_txt">Наш блог</p>
+                </div>
+                <div class="cards10">
+                    <div class="btn_w">
+                        <div class="card3">
+                            <p class="card3_txt">7 рецептов самых вкусных</br>шоколадных мафинов</p>
+                            <div class="btn_card3">
+                                <a class="btn_card3_a" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="card3">
+                            <p class="card3_txt">Лучшие начинки для</br>мафинов: как</br>приготовить?</p>
+                            <div class="btn_card3">
+                                <a class="btn_card3_a" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="card3">
+                            <p class="card3_txt">Как сделать воздушный</br>крем для маффинов?</p>
+                            <div class="btn_card3">
+                                <a class="btn_card3_a" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="str9" id="section5">
+                <img src="../Moco/img/Contact details.png" alt="">
+            </div>
+            <div class="str10">
+                <div class="img">
+                    <div class="btn3">
+                        <a class="btn_a3" href="#">Позвонить</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="nav_footer">
+                <nav>
+                    <ul class="nav1">
+                        <li class="nav_header1"><a class="nav_header_txt1" href="#section1">Почему мы?</a></li>
+                        <li class="nav_header1"><a class="nav_header_txt1" href="#section3">Как сделать заказ?</a></li>
+                        <li class="nav_header1"><a class="nav_header_txt1" href="#section3">Оплата и доставка</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="social__img_q">
+                <a href="#" class="social__img">
+                    <img src="../Moco/img/Instagram.png" alt="instagram">
+                </a>
+                <a href="#" class="social__img">
+                    <img src="../Moco/img/Phone.png" alt="phone">
+                </a>
+                <a href="#" class="social__img">
+                    <img src="../Moco/img/Youtube.png" alt="Youtube">
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+
+
